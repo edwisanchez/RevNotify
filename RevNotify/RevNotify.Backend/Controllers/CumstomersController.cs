@@ -7,11 +7,11 @@ namespace RevNotify.Backend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CumstomersController : ControllerBase
+    public class CustomersController : ControllerBase
     {
         private readonly DataContext _context;
 
-        public CumstomersController(DataContext context)
+        public CustomersController(DataContext context)
         {
             _context = context;
         }

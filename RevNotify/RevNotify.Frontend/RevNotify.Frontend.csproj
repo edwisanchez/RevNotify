@@ -12,4 +12,8 @@
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RevNotify.Shared\RevNotify.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

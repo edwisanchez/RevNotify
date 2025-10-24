@@ -1,6 +1,6 @@
 ﻿<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">RevNotify.Frontend</a>
+        <a class="navbar-brand" href="">Surtimotos RevNotify</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -9,21 +9,33 @@
 
 <div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
     <nav class="flex-column">
+        <div style="text-align:center; padding:10px 0;">
+            <img src="https://scontent-bog2-1.xx.fbcdn.net/v/t39.30808-6/324593112_936351274210267_1874528440600057910_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=ZdIQG5PTXgsQ7kNvwEKYJBP&_nc_oc=Adn0jKBYq0DeN0p5HLjpyc26JunB96f2WcbUEA8HS5QSkdWzvZ-dSPMYIZmwb-q5Xac&_nc_zt=23&_nc_ht=scontent-bog2-1.xx&_nc_gid=36Md7k46wl0pl9F-hJjoew&oh=00_AfcFZxsh_IY_cgOdGpfkdUTG3lMD4LFEQgti_fa6BFk6WA&oe=6901E473"
+                 alt="Logo"
+                 style="max-width:100px; max-height:100px; display:block; margin:0 auto; border-radius:6px;" />
+        </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Inicio
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="customers">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Clientes
             </NavLink>
         </div>
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Servicios
             </NavLink>
         </div>
+
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
+            <NavLink class="nav-link" href="counter">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Agenda
             </NavLink>
         </div>
+       
     </nav>
 </div>
 
