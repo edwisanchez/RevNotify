@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RevNotify.Backend.Data;
 using RevNotify.Shared.Entites;
@@ -53,6 +52,20 @@ namespace RevNotify.Backend.Controllers
             currentcustomer.Name = customer.Name;
 
             _context.Customers.Update(currentcustomer);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var customer = await _context.Customers.FindAsync(id);
+            if (customer == null)
+            {
+                return NotFound();
+            }
+
+            _context.Remove(customer);
             await _context.SaveChangesAsync();
             return NoContent();
         }
