@@ -11,7 +11,7 @@ using RevNotify.Backend.Data;
 namespace RevNotify.Backend.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20251024022512_AddCustomers")]
+    [Migration("20251024040727_AddCustomers")]
     partial class AddCustomers
     {
         /// <inheritdoc />
