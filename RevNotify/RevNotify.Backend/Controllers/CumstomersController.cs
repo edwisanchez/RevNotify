@@ -26,12 +26,12 @@ namespace RevNotify.Backend.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAsync(int id)
         {
-            var country = await _context.Customers.FindAsync(id);
-            if (country == null)
+            var customer = await _context.Customers.FindAsync(id);
+            if (customer == null)
             {
                 return NotFound();
             }
-            return Ok(country);
+            return Ok(customer);
         }
 
         [HttpPost]
@@ -40,6 +40,21 @@ namespace RevNotify.Backend.Controllers
             _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
             return Ok(customer);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> PutAsync(Customer customer)
+        {
+            var currentcustomer = await _context.Customers.FindAsync(customer.Id);
+            if (currentcustomer == null)
+            {
+                return NotFound();
+            }
+            currentcustomer.Name = customer.Name;
+
+            _context.Customers.Update(currentcustomer);
+            await _context.SaveChangesAsync();
+            return NoContent();
         }
     }
 }
