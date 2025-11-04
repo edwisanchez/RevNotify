@@ -13,5 +13,6 @@ namespace RevNotify.Shared.Entites
         public bool RequireMaintenance { get; set; }
         public int DayMaintenance { get; set; }
 
+        public ICollection<Product> Products { get; set; }
     }
 }
