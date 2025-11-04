@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace RevNotify.Shared.Entites
 {
@@ -16,5 +17,8 @@ namespace RevNotify.Shared.Entites
 
         [Required]
         public string Email { get; set; } = null!;
+
+        public bool AcceptNotifications { get; set; } 
+        public bool AcceptDataProcessing { get; set; } 
     }
 }
