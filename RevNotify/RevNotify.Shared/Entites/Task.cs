@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RevNotify.Shared.Entites
 {
-    public class Task
+    public class TaskMaintenance
     {
         public int Id { get; set; }
         public int IdProduct { get; set; }
