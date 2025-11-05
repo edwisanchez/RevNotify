@@ -2,7 +2,7 @@ using Fantasy.Frontend.Repositories;
 using Microsoft.AspNetCore.Components;
 using RevNotify.Shared.Entites;
 
-namespace RevNotify.Frontend.Pages.Customers
+namespace RevNotify.Frontend.Pages.Products
 {
     public partial class ProductsIndex
     {
