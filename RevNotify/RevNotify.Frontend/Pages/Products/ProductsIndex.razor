@@ -1,7 +1,12 @@
 ﻿@page "/products"
 
 <h3>Productos</h3>
-
+@if (Products is null)
+{
+	<p>Cargando...</p>
+}
+else
+{
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -33,4 +38,4 @@
 	</tbody>
 </table>
 
-
+}

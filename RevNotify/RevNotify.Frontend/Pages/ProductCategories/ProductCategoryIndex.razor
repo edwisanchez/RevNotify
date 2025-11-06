@@ -2,6 +2,13 @@
 
 <h3>Categorias</h3>
 
+@if (ProductCategories is null)
+{
+	<p>Cargando...</p>
+}
+else
+{
+
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -30,5 +37,5 @@
 
 	</tbody>
 </table>
-
+}
 

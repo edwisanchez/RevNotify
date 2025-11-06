@@ -2,38 +2,43 @@
 
 <h3>Clientes</h3>
 
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<td>Identificacion</td>
-			<td>Cliente</td>
-			<td>Edad</td>
-			<td>Telefono</td>
-			<td>Correo</td>
-			<td>Direccion</td>
-			<td>Acciones</td>
-		</tr>
-	</thead>
-	
-	<tbody>
-		@foreach (var customer in Customers!)
-		{
-			<tr>
-				<td>@customer.DocumentId</td>
-				<td>@customer.Name</td>
-				<td>@customer.Age</td>
-				<td>@customer.Telephone</td>
-				<td>@customer.Email</td>
-				<td>@customer.Address</td>
-				<td>
-					<a class="btn btn-warning">Editar</a>
-					<button class="btn btn-danger">Borrar</button>
-				</td>
-			</tr>
-		}
-	
-		
-	</tbody>
-</table>
-
+<div class="mb-3">
+	<a class="btn btn-primary" href="/countries/create">Nuevo Cliente</a>
+</div>
+<GenericList MyList="Customers">
+    <Body>
+        <table class="table table-striped">
+            <thead>
+	<tr>
+		<td>Identificacion</td>
+		<td>Cliente</td>
+		<td>Edad</td>
+		<td>Telefono</td>
+		<td>Correo</td>
+		<td>Direccion</td>
+		<td>Acciones</td>
+	</tr>            </thead>
+            <tbody>
+@foreach (var customer in Customers!)
+                {
+                    <tr>
+                    
+                            <td>@customer.DocumentId</td>
+                        <td>@customer.Name</td>
+                        <td>@customer.Age</td>
+                        <td>@customer.Telephone</td>
+                        <td>@customer.Email</td>
+                        <td>@customer.Address</td>
+                        
+                     
+                        <td>
+                            <a class="btn btn-warning">Editar</a>
+                            <button class="btn btn-danger">Borrar</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </Body>
+</GenericList>
 
